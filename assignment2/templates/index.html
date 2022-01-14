@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<head>
+<title>URL SHORTENER LINK </title>
+<style type="text/css">
+.form{
+			padding:50px 20px;
+			background:#d2e9f7;
+		}
+		.form>div{
+			width:400px;
+			margin:10px auto;
+		}
+		.form .form-element input,
+		.form .form-element button{
+			width:100%;
+			padding:10px;
+			margin-top:10px;
+		}
+		.form .form-element button{
+			background:#111;
+			color:#eee;
+			outline:none;
+			border:none;
+			cursor:pointer;
+		}
+</style>
+</head>
+<body>
+    <div class="form">
+		<div class="form-element">
+            <h1 style="text-align:center;"><strong>URL SHORTENER</strong></h1>
+            <form action="http://localhost:5000/result" method="POST">
+            <input type="text" name="name" placeholder="Enter the URL" pattern="https://.*", required/>
+		    <button id="create-short-url">Create Short URL</button>
+        </div>
+    </div>
+</body>
+</html>
+
+

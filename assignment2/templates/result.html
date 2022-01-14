@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<style type="text/css">
+		{
+			margin:0px;
+			padding:0px;
+			box-sizing:border-box;
+		}
+		body{
+			font-family:"Raleway",sans-serif;
+		}
+		.list{
+			width:800px;
+		}
+		.list h1{
+			font-size:20px;
+			margin-bottom:20px;
+			color:blue;
+		}
+		.list table{
+			width:10%;
+			text-align:left;
+		}
+		.list table thead tr{
+			background:#555;
+			color:#eee;
+		}
+		.list table thead tr,th,
+		.list table tbody tr td{
+			padding:5px;
+		}
+		.list table tbody tr:nth-child(odd){
+		background:#eee;
+		}
+		</style>
+</head>
+   <body>
+        <div class="list">
+		    <h1>Shorten Links</h1>
+        <table>
+          <thead>
+            <tr>
+                <th>Id</th>
+                <th>Timestamp</th>
+                <th>IP_address</th>
+                <th>ShortURL</th>
+                <th>Longurl</th>
+                <th>Count</th>
+            </tr>
+            <thead>
+          <tbody>
+            {% for key in output %}
+            <tr>
+                <td>{{key[0]}}</td>
+                <td>{{key[1]}}</td>
+                <td>{{key[2]}}</td>
+                <td>{{key[3]}}</td>
+                <td>{{key[4]}}</td>
+                <td>{{key[5]}}</td>
+            </tr>
+            {% endfor %}
+            <tbody>
+        </table>
+    </div>
+   </body>
+</html>
